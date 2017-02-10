@@ -1,5 +1,10 @@
 window.onload = function() {
   var ldemo = demo();
+  for(var i = 0; i < 10; i++){
+    ldemo.nextIteration();
+  }
+  var tree = ldemo.tree;
+
 
 	var canvas = document.getElementById('viewer');
 	paper.setup(canvas);

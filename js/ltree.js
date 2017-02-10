@@ -9,7 +9,7 @@ function LTree(data){
       _depestLevel = _depestLevel.getChildren();
     }else{
       var curLevel = [];
-      for (var levelIndex = 0, levelLength = targetset.length;
+      for (var levelIndex = 0, levelLength = _depestLevel.length;
         levelIndex < levelLength; levelIndex++) {
           var curNode = _depestLevel[levelIndex];
           curNode.applyRules(rules);

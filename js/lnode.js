@@ -28,7 +28,7 @@ function LNode(data){
               targetIndex < targetLength; targetIndex++) {
                 var child = new LNode(targetset[targetIndex]);
                 child.setParent(this);
-                this.addChildren(child);
+                this.addChild(child);
             }
           }
         }

@@ -6,7 +6,7 @@ function LSystem(variables, constants, axiom, rules){
   this.tree = new LTree(axiom);
 
   this.nextIteration = function(){
-    tree.applyRules(rules);
+    this.tree.applyRules(rules);
   };
 };
 
