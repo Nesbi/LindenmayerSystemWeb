@@ -21,7 +21,7 @@ function LNode(data){
 
         var curRule = rules[ruleIndex];
         if(curRule instanceof LRule){
-          if(curRule.input === data){
+          if(curRule.input === this.data){
             var targetset = curRule.targetset;
             //Apply rule and create all children
             for (var targetIndex = 0, targetLength = targetset.length;
