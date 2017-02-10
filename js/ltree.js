@@ -1,0 +1,30 @@
+function LTree(data){
+  var _root = new LNode(data);
+  var _depth = 0;
+  var _depestLevel = _root;
+
+  this.applyRules = function(rules){
+    if(_depestLevel === _root){
+      _depestLevel.applyRules(rules);
+      _depestLevel = _depestLevel.getChildren();
+    }else{
+      var curLevel = [];
+      for (var levelIndex = 0, levelLength = targetset.length;
+        levelIndex < levelLength; levelIndex++) {
+          var curNode = _depestLevel[levelIndex];
+          curNode.applyRules(rules);
+          curLevel.push(curNode.getChildren());
+      }
+      _depestLevel = curLevel;
+    }
+    _depth++;
+  }
+
+  this.getDepth = function(){
+    return _depth;
+  }
+
+  this.getRoot = function(){
+    return _root;
+  }
+};
