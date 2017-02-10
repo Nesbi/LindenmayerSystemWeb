@@ -13,7 +13,7 @@ function LTree(data){
         levelIndex < levelLength; levelIndex++) {
           var curNode = _depestLevel[levelIndex];
           curNode.applyRules(rules);
-          curLevel.push(curNode.getChildren());
+          curLevel.concat(curNode.getChildren());
       }
       _depestLevel = curLevel;
     }
