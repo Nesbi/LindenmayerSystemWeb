@@ -8,7 +8,7 @@ function LNode(data){
   }
 
   this.addChild = function(child){
-    if(parent instanceof LNode) _children.push(child);
+    _children.push(child);
   }
 
   this.getChildren = function(){
