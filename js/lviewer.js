@@ -1,3 +1,4 @@
+var drawable = true;
 window.onload = function() {
   var canvas = document.getElementById('viewer');
   paper.setup(canvas);
@@ -13,9 +14,13 @@ window.onload = function() {
   paper.view.draw();
 
   window.onmousedown = function(){
-    ldemo.nextIteration();
-    paper.project.clear();
-    drawTree(tree,start,280);
+    if(drawable){
+      ldemo.nextIteration();
+      paper.project.clear();
+      drawTree(tree,start,280);
+    }else{
+      console.log("More iterations will not be visible.");
+    }
 };
 }
 
@@ -42,6 +47,8 @@ drawBranch = function(node, point, angle, length, shortening){
 
       drawBranch(child,childPoint,angle-deltaAngle,length*shortening, shortening);
     }
+  }else{
+    drawable = false;
   }
 }
 
